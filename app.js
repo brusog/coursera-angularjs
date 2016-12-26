@@ -11,7 +11,7 @@
         $scope.checkIfTooMuch = function() {
             var lunchItemsCount = getCountOfLunchItems($scope.lunchItems);
             if (lunchItemsCount === 0) {
-                $scope.verdict = "";
+                $scope.verdict = "Please enter data first";
             } else if (lunchItemsCount <= 3) {
                 $scope.verdict = "Enjoy";
             } else {
