@@ -1,0 +1,6 @@
+<ol>
+    <li ng-repeat="lunchItem in fndItmsCtrlr.found">
+    {{lunchItem.short_name + " , " + lunchItem.name + " , " + lunchItem.description}}
+      <button ng-click="fndItmsCtrlr.onRemove({index: $index})">Don't want this One</button>
+    </li>
+</ol>

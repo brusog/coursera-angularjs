@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="NarrowItDownApp">
+
+<head>
+    <title>Module3 Assignment- Narrow it down for me</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<body>
+    <h1>Module3 Assignment - Narrow it down</h1>
+    <div ng-controller="NarrowItDownController as nidCtrlr">
+        <input type="text" placeholder="Enter description of item" ng-model="nidCtrlr.itemToSearchFor">
+        <button ng-click="nidCtrlr.search()">Narrow It Down For Me!</button>
+        <found-items found='nidCtrlr.listItems' on-remove='nidCtrlr.remove(index)'></found-items>
+        <br/>
+        <br/>
+        <div ng-show="nidCtrlr.errorMessage && nidCtrlr.errorMessage.length>0">{{nidCtrlr.errorMessage}}
+        </div>
+    </div>
+</body>
+
+</html>
