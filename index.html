@@ -1,26 +1,21 @@
 <!DOCTYPE html>
-<html ng-app="myFirstApp">
-
+<html ng-app = "MenuApp">
 <head>
-    <meta charset="utf-8">
-    <title>Hello Coursera</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
-    <script src="app.js"></script>
+  <title>Welcome to the Restaurant</title>
+  <script src='angular.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-beta.3/angular-ui-router.js'></script>
+  <script src='menuapp.module.js'></script>
+  <script src='data.module.js'></script>
+  <script src='menudata.service.js'></script>
+  <script src="categories.component.js"></script>
+  <script src="items.component.js"></script>
+  <script src="routes.js"></script>
+  <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
-
-<body>
-    <h1>Lunch Box Evaluator</h1>
-    <div ng-controller="LunchController">
-        <input type="text" placeholder="What do have for lunch? Pizza, Fries, Coke, Ice Cream? " ng-model="lunchItems">
-        <br/>
-        <br/>
-        <button ng-click="checkIfTooMuch()">Check If too Much</button>
-        <br/>
-        <br/>
-        <div>
-            {{verdict}}
-        </div>
-    </div>
+<body >
+  <h1>Welcome to the restaurant site..{{10+20}}</h1>
+  <a ui-sref='homeState' ui-sref-active='active' href="">Home</a>
+  <a ui-sref='categoriesState' ui-sref-active='active' href="">Categories</a>
+  <ui-view></ui-view>
 </body>
-
 </html>

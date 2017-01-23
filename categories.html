@@ -1,0 +1,16 @@
+<link rel="stylesheet" type="text/css" href="styles.css">
+<div>
+<div class='leftHalf'>
+<h3>List of categories</h3>
+<ul>
+  <li ng-repeat='category in $ctrl.categories.data'>
+    <a ui-sref='categoriesState.itemsState({category:category.short_name })'>{{category.short_name}} --{{category.name}}</a>
+  </li>
+</ul>
+</div>
+<div class='rightHalf'>
+    <ui-view></ui-view>
+</div>
+</div>
+
+

@@ -1,0 +1,11 @@
+.leftHalf{
+  float: left;
+  width: 50%;
+}
+.RighttHalf{
+  float: right;
+  width: 50%;
+}
+.active {
+  font-weight: bold;
+}
