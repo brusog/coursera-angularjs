@@ -1,0 +1,23 @@
+<div class="container">
+    <div ng-hide='infoCtrl.notYetSignedUpMsg && infoCtrl.notYetSignedUpMsg.length >1'>
+    <h1>Your profile:</h1>
+    <fieldset >
+        <br/> First Name:{{infoCtrl.firstName}}
+        <br/>
+        <br/> Last Name:{{infoCtrl.lastName}}
+        <br/>
+        <br/> Email:{{infoCtrl.email}}
+        <br/>
+        <br/> Phone: {{infoCtrl.phone}}
+        <br/>
+        <br/>
+        <br/>
+    </fieldset>
+    <menu-item menu-item='infoCtrl.favMenuItem'></menu-item>
+    </div>
+    <div ng-show='infoCtrl.notYetSignedUpMsg && infoCtrl.notYetSignedUpMsg.length >1'>
+      <a ui-sref='public.signUp' ui-sref='active'>
+      {{infoCtrl.notYetSignedUpMsg}}
+      </a>
+    </div>
+</div>

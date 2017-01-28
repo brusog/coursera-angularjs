@@ -1,0 +1,36 @@
+<div class="container">
+  <h1>Sign Up for our news letter</h1>
+  <fieldset name="Sign Up">
+    <form name='signUpForm' novalidate>
+
+      First Name: <input type="text" name="firstName" required placeholder='First Name'ng-model='signupCtrl.firstName'>
+      <span ng-if='signUpForm.firstName.$error.required &&
+      signUpForm.firstName.$touched '>First Name is a required field</span>
+
+      <br/><br/>
+
+
+      Last Name: <input type="text" name="lastName" placeholder='Last Name' ng-model='signupCtrl.lastName'>
+      <br/><br/>
+
+      Email: <input type="email" name="userEmail" placeholder="handle@domain.com" ng-model='signupCtrl.email'>
+
+      <span ng-if='signUpForm.userEmail.$touched && signUpForm.userEmail.$invalid'> Please enter a valid email ID</span>
+      <br/><br/>
+
+      Phone: <input type="number" name="userPhone" placeholder="Your phone" ng-model='signupCtrl.phone'>
+
+      <br/><br/>
+
+      Favorite Menu Item: <input type="text" placeholder="eg: A1" maxlength='2' required ng-model='signupCtrl.favoriteMenu' name="favItem">
+
+      <span ng-if="signUpForm.favItem.$touched && signUpForm.favItem.$error.required ">Please enter your favorite Menu Item</span>
+      <span ng-if='signupCtrl.menuItemNotFoundMessage && signupCtrl.menuItemNotFoundMessage.length>1'>{{signupCtrl.menuItemNotFoundMessage}}</span>
+      <br/><br/>
+      <button ng-disabled="signUpForm.$invalid" ng-click='signupCtrl.signUp()'>Sign Up</button>
+    </form>
+  </fieldset>
+  <div ng-if='signupCtrl.signUpSuccessMsg && signupCtrl.signUpSuccessMsg.length>1'>
+  <h3>{{signupCtrl.signUpSuccessMsg}}</h3>
+  </div>
+</div>
